@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="margin: 0px">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="main.css"/>
+		<!-- TODO: actually organise these things properly instead of chucking them in a style tag-->
+		<style>
+			#topBar {
+				background-color: #333;
+				overflow: hidden;
+				padding-top: 3px;
+				padding-bottom: 3px;
+				margin-bottom: 3px;
+				width: 100%;
+				/*position: fixed;*/
+				top: 0;
+				/*height: 20px;*/
+			}
+			#bottomBar {
+				background-color: #333;
+				overflow: hidden;
+				padding: 3px;
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+			}
+			#palette {
+				display:inline-block;
+			}
+			#palette div {
+				display:inline-block;
+				width:16px;
+				height:16px;
+				margin-left: 6px;
+			}
+		</style>
+		<title>Fluid Test</title>
+	</head>
+	<body style="margin: 0px">
+		<div id="topBar">
+			Width: <input id="widthInput" type="number" min=5 max=100 width="50px"/>
+			Height: <input id="heightInput" type="number" min=5 max=100 width="50px"/>
+			Fluid Degradations: <input id="degradInput" type="number" min=2 max=128 width="50px"/>
+			<button id="reload" style="margin-left: 5px">Reload with settings</button>
+			<button id="resetSettings" style="margin-left: 5px">Reload default settings</button>
+		</div>
+		<canvas id="board"></canvas>
+		<div id="bottomBar">
+			<div id="palette"></div>
+			<button id="tick">Tick</button>
+		</div>
+		<script src="./dist/_bundle.fluidtest.js"></script>
+	</body>
+</html>

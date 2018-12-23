@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="main.css"/>
+	</head>
+	<body>
+		<p>I'll probably actually put something here at some point. Until then, have a link to my <a href="./fluidtest.html">experimental fluid cellular automata</a>.</p>
+		<p>And an SVG.</p>
+		<svg viewbox="25 25 75 75" width=256px>
+			<mask id="cfsvgmask"> 
+				<circle cx="50" cy="50" r="20" fill="white"/>
+			</mask>
+			<circle cx="50" cy="50" r="20" fill="#272727"/>
+			<polygon points="50,30 25,80 75,80", fill="#00FF00" mask="url(#cfsvgmask)"/>
+			<polygon points="50,30 40,60 30,80 70,80 60,60", fill="#77FF77" mask="url(#cfsvgmask)"/>
+			<circle cx="50" cy="50" r="20" fill="none" stroke="#111111"/>
+		</svg>
+
+		<!--<script src="./build/_bundle.main.js"></script>-->
+	</body>
+</html>
