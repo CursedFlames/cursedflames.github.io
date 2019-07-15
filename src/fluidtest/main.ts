@@ -97,7 +97,7 @@ boardElem.setAttribute("style",
 boardElem.width = width*(degrad+1);
 boardElem.height = height*(degrad+1);
 boardElem.onmousemove = function(event: MouseEvent) {
-	if (event.which !== 1) return;
+	if ((event.buttons & 1) !== 1) return;
 	let rect = boardElem.getBoundingClientRect();
 	let clickX = event.clientX - rect.left;
 	let clickY = event.clientY - rect.top;
